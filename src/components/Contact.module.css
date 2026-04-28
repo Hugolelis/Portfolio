@@ -1,0 +1,36 @@
+.contact {
+  padding: 7rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  text-align: center;
+}
+
+.inner :global(.section-title) {
+  margin-bottom: 1rem;
+}
+
+.sub {
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.social {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.social a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social a:hover { color: var(--text); }

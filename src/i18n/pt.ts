@@ -1,0 +1,74 @@
+export const pt = {
+  nav: {
+    about: 'Sobre',
+    timeline: 'Trajetória',
+    projects: 'Projetos',
+    contact: 'Contato',
+  },
+  hero: {
+    role: 'Desenvolvedor de Software',
+    title1: 'Construindo',
+    title2: 'sistemas',
+    title3: 'que escalam.',
+    sub: 'Transformo regras de negócio complexas em APIs robustas, performáticas e fáceis de manter.',
+    cta_projects: 'Ver projetos',
+    cta_contact: 'Falar comigo',
+    cta_cv: 'Baixar currículo',
+    available: 'code',
+  },
+  about: {
+    title: 'Sobre mim',
+    p1: 'Sou Hugo, desenvolvedor de software com foco em arquitetura de APIs, bancos de dados relacionais e sistemas distribuídos. Gosto de resolver problemas difíceis com soluções simples e bem estruturadas.',
+    skills_title: 'Stack principal',
+  },
+  projects: {
+    title: 'Projetos',
+
+    p1_title: 'API de Pagamentos',
+    p1_desc: 'Microsserviço de alta disponibilidade processando +50k transações diárias com filas, retries e observabilidade.',
+  },
+  timeline: {
+    title: 'Trajetória',
+    items: [
+      {
+        year: '2023',
+        type: 'Primeiro contato com programação',
+        role: 'Classificado para o evento programação 2.0 Inatel',
+        place: 'Inatel',
+        desc: 'Classificado para competição de desafios de programação com foco em Python, resolvendo problemas algorítmicos sob pressão de tempo.',
+      },
+
+      {
+        year: '2024',
+        type: 'Formação',
+        role: 'Bacharelado em Sistemas de Informação',
+        place: 'UniFoa',
+        desc: 'Curso em andamento com foco em desenvolvimento de software, arquitetura de sistemas e banco de dados.',
+      },
+
+      {
+        year: '2024',
+        type: 'Trabalho',
+        role: 'Desenvolvedor Backend Autônomo',
+        place: 'Autônomo',
+        desc: 'Desenvolvimento de arquiteturas backend robustas e escaláveis para aplicações web. Design de APIs, integração de sistemas, otimização de performance e gerenciamento completo do ciclo de vida do software.',
+      },
+
+      {
+        year: '2025',
+        type: 'Estágio',
+        role: 'Estagiário Backend',
+        place: 'Metta Innovations',
+        desc: 'Foco em Visão Computacional e IA. Desenvolvimento com C++ e Python, MySQL e PostgreSQL, aplicações Qt/QML, Docker, testes unitários e metodologia ágil/Scrum.',
+      },
+    ],
+  },
+  contact: {
+    title: 'Vamos conversar?',
+    sub: 'Quer trocar uma ideia sobre arquitetura de sistemas?',
+    cta: 'Enviar e-mail',
+  },
+  footer: 'Desenvolvido @ Hugolelis',
+}
+
+export type Translations = typeof pt

@@ -1,0 +1,8 @@
+export { Nav } from './Nav'
+export { Hero } from './Hero'
+export { About } from './About'
+export { Timeline } from './Timeline'
+export { Projects } from './Projects'
+export { ProjectCard } from './ProjectCard'
+export { Contact } from './Contact'
+export { Footer } from './Footer'

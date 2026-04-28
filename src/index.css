@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme='dark'] {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: #1e1e1e;
+  --grid-color: #1e1e1e;
+  --nav-bg: rgba(10,10,10,0.85);
+  --accent: #e8ff47;
+  --accent-dim: #c8e030;
+  --accent-blue: #60a5fa;
+  --text: #f0f0f0;
+  --muted: #666;
+}
+
+[data-theme='light'] {
+  --bg: #f5f4f0;
+  --surface: #eeecea;
+  --border: #dddbd7;
+  --grid-color: #dddbd7;
+  --nav-bg: rgba(245,244,240,0.85);
+  --accent: #5c6b00;
+  --accent-dim: #4a5500;
+  --accent-blue: #2563eb;
+  --text: #1a1a1a;
+  --muted: #888;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  font-family: var(--font-body);
+}
+.btn--primary { background: var(--accent); color: var(--bg); }
+.btn--primary:hover { background: var(--accent-dim); }
+.btn--ghost { border: 1px solid var(--border); color: var(--text); background: none; }
+.btn--ghost:hover { border-color: #888; }
+.btn--lg { padding: 1rem 2.5rem; font-size: 1rem; }
+
+@media (max-width: 700px) {
+  .container { padding: 0 1.5rem; }
+}
