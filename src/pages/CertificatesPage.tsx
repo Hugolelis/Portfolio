@@ -1,30 +1,22 @@
 import { useState } from 'react'
+import { Nav, PdfModal } from '../components'
 import { useApp } from '../context/AppContext'
-import { PdfModal } from './PdfModal'
-import styles from './Certificates.module.css'
+import styles from './CertificatesPage.module.css'
 
-interface CertItem {
-  name: string
-  issuer: string
-  year: string
-  file: string
-}
-
-const LIMIT = 3
-
-export function Certificates() {
+export function CertificatesPage() {
   const { t } = useApp()
-  const [selected, setSelected] = useState<CertItem | null>(null)
-  const items = t.certificates.items
-  const visible = items.slice(0, LIMIT)
-  const hasMore = items.length > LIMIT
+  const [selected, setSelected] = useState<{ name: string; issuer: string; year: string; file: string } | null>(null)
 
   return (
-    <section id="certificados" className={styles.certificates}>
-      <div className="container">
-        <h2 className="section-title">{t.certificates.title}</h2>
+    <div className={styles.page}>
+      <Nav />
+      <main className={styles.main}>
+        <header className={styles.header}>
+          <span className={styles.count}>{t.certificates.count.replace('{n}', String(t.certificates.items.length))}</span>
+          <h1 className={styles.title}>{t.certificates.title}</h1>
+        </header>
         <div className={styles.grid}>
-          {visible.map((cert, i) => (
+          {t.certificates.items.map((cert, i) => (
             <button
               key={i}
               className={styles.card}
@@ -42,13 +34,7 @@ export function Certificates() {
             </button>
           ))}
         </div>
-        {hasMore && (
-          <a href="/certificados" className={styles.viewAll}>
-            <span>{t.certificates.viewAll}</span>
-            <span className={styles.viewArrow}>→</span>
-          </a>
-        )}
-      </div>
+      </main>
 
       {selected && (
         <PdfModal
@@ -58,6 +44,6 @@ export function Certificates() {
           onClose={() => setSelected(null)}
         />
       )}
-    </section>
+    </div>
   )
 }
